@@ -18,7 +18,7 @@ with open(filename, 'r', encoding='utf-8') as csvfile:
     # extracting each data row one by one
     for row in csvreader:
         rows.append(row)
-        if
+        
  
      #get total number of rows
     print("Total no. of rows: %d"%(csvreader.line_num))
