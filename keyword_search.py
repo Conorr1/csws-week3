@@ -1,9 +1,5 @@
-#import csv
-#import pandas as pd
-import numpy
-
 import csv
-import pandas as pd
+from operator import contains
 # csv file name
 filename = 'regex_imdb.csv'
  
@@ -31,36 +27,28 @@ with open(filename, 'r', encoding='utf-8') as csvfile:
 print('Field names are:' + ', '.join(field for field in fields))
  
 
-
-  
-
-#column_names = ['movie_Name', 'Year', 'Genre', 'Run_time', 'Rating', 'Meta_score', 'Votes', 'Director', 'cast', 'Gross']
-#movie_list = pd.read_csv("regex_imdb.csv", names=column_names,  )
-df = pd.read_csv('regex_imdb.csv')
 def findMovies():
   while True:
-    searchTerm=input("searching for ( exit to exit )?")
+    searchTerm=input("searching for ( exit to exit )?") #user input as to which movie they want to search
    
-    if searchTerm == 'exit':
+    if searchTerm == 'exit': # if user wants to exit search
        break
     
-    for row in rows:
+    for row in rows:# searching rows in csv
       
-      if(df.row[0].str.contains(searchTerm)):
+      if searchTerm in row[0]:# checks if the search term is in any of the rows , is character case bound so uppercase
          print("movie found ")
+         print(" Name: " + row[0])
+         print(" Year: " + row[1])
+         print(" Genre: " + row[2])
+         print(" Run_Time: " + row[3]) 
+         print(" Rating: " + row[4])                  #displays all the infor abou the searched movie
+         print(" Meta_Score: " + row[5])
+         print(" Votes: " + row[6])
+         print(" Director: " + row[7])
+         print(" Cast: " + row[8])
+         print(" Gross: " +  row[9])
       
-      
-    #for row in rows:
-     #     print('-----------------------')
-      #    print('Name: ' + row[0])
-       #   print('Year: ' + row[1])
-       #   print('Genre: ' + row[2])
-       #   print('Run_Time: ' + row[3]) 
-       #   print('Rating: ' + row[4])
-       #   print('Meta_Score: ' + row[5])
-       #   print('Votes: ' + row[6])
-       #   print('Director: ' + row[7])
-       #   print('Cast: ' + row[8])
-       #   print('SGross: ' + str ([9]))
+   
 
-findMovies()
+findMovies() # calls function
