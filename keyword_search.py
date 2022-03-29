@@ -1,7 +1,7 @@
 import csv
 from operator import contains
 # csv file name
-filename = 'regex_imdb.csv'
+filename = 'C:/Users/csmclunt/OneDrive - Liverpool John Moores University/csws(Team 4)/csws-week3/regex_imdb.csv'
  
 # initializing the titles and rows list
 fields = []
