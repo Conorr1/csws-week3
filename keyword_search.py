@@ -48,6 +48,8 @@ def findMovies():
          print(" Director: " + row[7])
          print(" Cast: " + row[8])
          print(" Gross: " +  row[9])
+     
+         
       
    
 
