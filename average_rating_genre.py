@@ -1,8 +1,9 @@
 import csv
 from lib2to3.pgen2.token import EQUAL
 import statistics
+from unicodedata import decimal
 # csv file name
-filename = 'C:/Users/csmclunt/OneDrive - Liverpool John Moores University/csws(Team 4)/csws-week3/regex_imdb.csv'
+filename = 'regex_imdb.csv'
  
 # initializing the titles and rows list
 fields = []
@@ -26,15 +27,41 @@ with open(filename, 'r', encoding='utf-8') as csvfile:
     print(len(rows))
  #printing the field names
 print('Field names are:' + ', '.join(field for field in fields))
+                     
+filename = open('regex_imdb.csv', 'r', encoding="utf-8")
+file = csv.DictReader(filename)
  
-rating_list = []
-with open("C:/Users/csmclunt/OneDrive - Liverpool John Moores University/csws(Team 4)/csws-week3/regex_imdb.csv", "r") as f:
-    for row in rows:
-        rating = row[4]
-        if rating is not None and rating is not "--":
-            rating_list.append(float(row[rating]))
-avg_rating = sum(rating_list) / len(rating_list)
-print ("avg of rating: ", avg_rating)
+ 
+ratings = []
+genre = []
+ 
+for col in file:
+    ratings.append(col['Rating'])
+    genre.append(col['Genre'])
+
+for i in genre:
+    str(i).replace(' ','')
+    genre.append(i)
+
+print("Ratings: ", ratings)
+print("genre", genre)
+ 
+ 
+ # with open('regex_imdb.csv', 'r') as f:
+#     reader = csv.reader(f)
+#     if row[4]:
+#         next(reader)
+#     the_numbers = [float(row[4]) for row in rows]
+#     average = sum(the_numbers) / len(the_numbers)
+
+# rating_list = []
+# # with open("regex_imdb.csv", "r") as f:
+# #     for row in rows:
+# #         rating = row[4]
+# #         if rating is not None and rating is not "--":
+# #             rating_list.append(float(row[rating]))
+# # avg_rating = sum(rating_list) / len(rating_list)
+# # print ("avg of rating: ", avg_rating)
 
    
 
