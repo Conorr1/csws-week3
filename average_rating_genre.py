@@ -1,7 +1,7 @@
 import csv
-from lib2to3.pgen2.token import EQUAL
 import statistics
-from unicodedata import decimal
+
+from statistics import mean
 # csv file name
 filename = 'regex_imdb.csv'
  
@@ -27,25 +27,35 @@ with open(filename, 'r', encoding='utf-8') as csvfile:
     print(len(rows))
  #printing the field names
 print('Field names are:' + ', '.join(field for field in fields))
-                     
+
+
+
 filename = open('regex_imdb.csv', 'r', encoding="utf-8")
 file = csv.DictReader(filename)
- 
- 
+
 ratings = []
 genre = []
- 
+delete_empty = [ele for ele in genre if ele.strip()]
+
+
 for col in file:
     ratings.append(col['Rating'])
     genre.append(col['Genre'])
 
-for i in genre:
-    str(i).replace(' ','')
-    genre.append(i)
 
-print("Ratings: ", ratings)
-print("genre", genre)
- 
+y = ''.join(ratings)
+z = int(y)
+results = [z]
+# results = [int(item) for item in results]
+print(results)
+# print("Ratings: ", type(ratings))
+# list_avg = mean(ratings)
+# print(type(ratings))
+
+
+
+# print("genre", genre)
+# print(k)
  
  # with open('regex_imdb.csv', 'r') as f:
 #     reader = csv.reader(f)
