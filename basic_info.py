@@ -5,7 +5,8 @@ import warnings
 import numpy as np
 warnings.simplefilter("ignore")
 from IPython.display import display
-
+def basicInfo():
+    pass
 df=pd.read_csv("regex_imdb.csv")
 df["Meta_score"]=df["Meta_score"].fillna(df["Meta_score"].median())
 df["Meta_score"]=df["Meta_score"].apply(np.round)

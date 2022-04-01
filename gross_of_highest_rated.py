@@ -6,6 +6,9 @@ import numpy as np
 warnings.simplefilter("ignore")
 from IPython.display import display
 
+def gross_of_highest_rated():
+    pass
+
 df=pd.read_csv("regex_imdb.csv")
 
 df.head(2)
