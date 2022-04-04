@@ -15,5 +15,5 @@ xx=pd.DataFrame()
 xx["Genre"]=np.hstack([np.array(x.split(",")) for x in df.Genre])
 xx["Genre"]=xx["Genre"].str.strip()
 xx["Genre"].value_counts()
-   
+print(xx)
 
