@@ -50,7 +50,5 @@ def findMovies():
          print(" Gross: " +  row[9])
      
          
-      
-   
 
 findMovies() # calls function
