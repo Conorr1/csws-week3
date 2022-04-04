@@ -17,13 +17,4 @@ print(avg)
 
 max_rating=avg["mean"]+avg["std"]
 
-fig, x=plt.subplots(figsize=(10,5))
-x.plot(max_rating,color='royalblue')
-x.grid(color='#95a5a6', linestyle='--', linewidth=1, axis='y')
-
-x.set_title("Highest rating for each year",fontsize=20,)
-x.set_xlabel("Year",fontsize=15)
-x.set_ylabel("Rating",fontsize=15)
-x.set_xlim(1960)
-plt.show()
 

@@ -14,9 +14,6 @@ nam=df.groupby(df["Name"])["Gross"].max().sort_values(ascending=False).head(10).
 nam["Gross"]
 print(nam)
 
-plt.figure(figsize=(10,5))
 x=df.groupby(df["Name"])["Gross"].max().sort_values(ascending=False).head(10)
-sns.barplot(x.values,x.index)
-plt.title("Top Ten Highest Grossed Movies Of All Time")
-plt.show()
+
 

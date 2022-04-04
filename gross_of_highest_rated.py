@@ -15,8 +15,3 @@ df.head(2)
 bb=df[["Name","Rating","Gross"]].sort_values("Rating").reset_index()[-10:]
 print(bb)
 
-plt.figure(figsize=(20,5))
-sns.barplot(x="Name",y="Gross",hue="Rating",data=bb)
-plt.title("GROSS OF THE TOP 10 HIGHEST RATING MOVIES",fontsize=15)
-plt.xticks(rotation=90)
-plt.show()

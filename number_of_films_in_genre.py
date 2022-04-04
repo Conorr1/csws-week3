@@ -16,9 +16,4 @@ xx["Genre"]=np.hstack([np.array(x.split(",")) for x in df.Genre])
 xx["Genre"]=xx["Genre"].str.strip()
 xx["Genre"].value_counts()
    
-sns.countplot(x="Genre", data=xx,order=xx["Genre"].value_counts().index[0:10])
-plt.ylabel("Number of films")
-plt.title('Number of films per Genre')
-plt.xticks(rotation=45)
-plt.show()
 
