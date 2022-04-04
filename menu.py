@@ -5,6 +5,7 @@ from average_runtime_by_year import average_runtime_by_year
 from basic_info import basicInfo
 from gross_of_highest_rated import gross_of_highest_rated
 from highest_grossed_movies import highest_grossed_movies
+from highest_rating_by_year import highest_rating_by_year
 from keyword_search import findMovies
 from top_10_film_director import top10
 
@@ -25,9 +26,12 @@ def Option5():
   highest_grossed_movies
 
 def Option6():
-  basicInfo
+  highest_rating_by_year
 
 def Option7():
+  basicInfo
+
+def Option8():
   top10
    
 menu_options = {
@@ -36,9 +40,10 @@ menu_options = {
   3:'Average Runtime per Year',
   4:'Gross of Highest Rated Movies',
   5:'Highest Grossed movies',
-  6:'Basic Info On dataset',
-  7:'Top 10 Movie Directors',
-  8:'exit!',
+  6:'Highest Rating by Year',
+  7:'Basic Info On dataset',
+  8:'Top 10 Movie Directors',
+  9:'exit!',
 }
 
 def print_menu():
@@ -62,9 +67,11 @@ def print_menu():
     elif option==7:
       Option7
     elif option==8:
+      Option8
+    elif option==9:
       sys.exit
     else:
-      print('Invalid option. Please enter a number between 1 and 8.')
+      print('Invalid option. Please enter a number between 1 and 9.')
     
       
 
