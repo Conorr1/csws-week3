@@ -15,6 +15,7 @@ xx=pd.DataFrame()
 xx["Genre"]=np.hstack([np.array(x.split(",")) for x in df.Genre])
 xx["Genre"]=xx["Genre"].str.strip()
 xx["Genre"].value_counts()
+print(xx)
    
 sns.countplot(x="Genre", data=xx,order=xx["Genre"].value_counts().index[0:10])
 plt.ylabel("Number of films")
